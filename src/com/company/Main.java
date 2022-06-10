@@ -56,7 +56,7 @@ public class Main {
         // меняем в объекте book2 дату с 1835 года на 1836
         book2.setYear(1836);
         System.out.println("book2.getYear() = " + book2.getYear());
-        System.out.println("book2.nameOfTheBook = " + book2.nameOfTheBook);
+        System.out.println("book2.nameOfTheBook = " + book2.getNameOfTheBook());
 
 
     }

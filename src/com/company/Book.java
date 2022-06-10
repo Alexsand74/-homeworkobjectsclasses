@@ -6,9 +6,9 @@ public class Book {
        Необходимо создать класс Book, который содержит в себе данные об имени, авторе и годе публикации.
        Типы полей должны быть String, Author (который мы создадим  в п. 2) и int.
         */
-      Author author;
-      int year;
-      String nameOfTheBook;
+      private Author author;
+      private int year;
+      private String nameOfTheBook;
       /*
       п 3
       Написать конструкторы для обоих классов, заполняющие все поля.
@@ -19,8 +19,8 @@ public class Book {
           this.nameOfTheBook = nameOfTheBook;
       }
 
-       public Book(String Names, String Surnames, int year, String nameOfTheBook ){
-          Author aut = new Author (Names,Surnames);
+       public Book(String names, String surnames, int year, String nameOfTheBook ){
+          Author aut = new Author (names,surnames);
            this.year = year;
         this.nameOfTheBook = nameOfTheBook;
 

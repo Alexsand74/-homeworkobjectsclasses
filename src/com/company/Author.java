@@ -11,7 +11,7 @@ public class Author {
     п 3
     Написать конструкторы для обоих классов, заполняющие все поля.
         */
-
+    // пишем конструктор для класса Author для полей name и surname
     public Author (String name, String surname){
         this.name = name;
         this.surname = surname;
@@ -29,5 +29,7 @@ public class Author {
     public String getSurname(){
         return this.surname;
     }
+
+
 
 }

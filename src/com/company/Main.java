@@ -105,7 +105,7 @@ public class Main {
         System.out.println("теперь применяем переопределенный метод equals ( book1.equals(book4);) как в классе Book, сравним книги book1 и book4");
         book1.equals(book4);
         System.out.println ("теперь сравниваем авторов этих же экземпляров класса Book и выводим на консоль true или false ");
-        System.out.println(book1.getAuthor().equals(book4.getAuthor())) ;
+        System.out.println("Автор книги тот же  - true, авторы разные - faulse, результат - " + book1.getAuthor().equals(book4.getAuthor())) ;
 
     }
 }

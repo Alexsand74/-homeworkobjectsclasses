@@ -64,11 +64,11 @@ public class Author {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Author author = (Author) o;
-        return surname.equals(author.surname);
+        return surname.equals(author.surname)&& name.equals(author.name);
     }
 
     @Override
     public int hashCode() {
-        return hash(surname);
+        return hash(name, surname);
     }
 }

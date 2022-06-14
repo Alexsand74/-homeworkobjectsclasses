@@ -94,9 +94,12 @@ public class Book extends Object {
     public String toString() {
         return id + ". Имя книги: " + nameOfTheBook + ". год издания книги: " + year ;
     }
-
+/*
     @Override
     public boolean equals(Object other) {
+        if (this.getClass() != other.getClass()) {
+            return false;
+        }
         Book veribleClass = (Book)other;
         boolean comparison = nameOfTheBook.equals(veribleClass.nameOfTheBook);
         if (comparison){
@@ -108,7 +111,24 @@ public class Book extends Object {
 
     @Override
     public int hashCode() {
-        return super.hashCode();
+        return Objects.hash(nameOfTheBook);
+    }
+    */
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        boolean varible = nameOfTheBook.equals(book.nameOfTheBook);
+        if (varible){
+            System.out.println( " Книги имеют одиаковы названия !");
+        } else {System.out.println(" У этих книг разные названия ! ");}
+        return varible;
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(nameOfTheBook);
+    }
 }

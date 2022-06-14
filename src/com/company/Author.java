@@ -1,5 +1,9 @@
 package com.company;
 
+import java.util.Objects;
+
+import static java.util.Objects.*;
+
 public class Author {
     /*
     п 2
@@ -56,13 +60,15 @@ public class Author {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        Author veribleClass = (Author) obj;
-        return surname.equals(veribleClass.surname);
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Author author = (Author) o;
+        return surname.equals(author.surname);
     }
 
     @Override
     public int hashCode() {
-        return super.hashCode();
+        return hash(surname);
     }
 }

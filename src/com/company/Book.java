@@ -21,11 +21,11 @@ public class Book extends Object {
         */
       // пишем конструктор для класса Book и его полей
       public Book (Author author, int year, String nameOfTheBook){
-          this.setAuthor(author);
-          this.setYear(year);
-          this.setNameOfTheBook(nameOfTheBook);
-          setCounter(getCounter() + 1);      // увеличение  счетчика создания объектов book
-          this.setId(getCounter());
+          this.author = author;
+          this.year = year;
+          this.nameOfTheBook = nameOfTheBook;
+          counter ++ ;      // увеличение  счетчика создания объектов book
+          this.id = counter;
        }
 
     // пишем конструктор для класса Book и его полей который внутри себя создает объект на основе
@@ -33,12 +33,11 @@ public class Book extends Object {
     // в классе Book, то с помощью этого поля, объект выводим из конструктора в класс Book и
     // создается объект класса Author
        public Book(String names, String surnames, int year, String nameOfTheBook ){
-          this.setAuthor(new Author (names,surnames));
-           this.setYear(year);
-        this.setNameOfTheBook(nameOfTheBook);
-           setCounter(getCounter() + 1);      // увеличение  счетчика создания объектов book
-           this.setId(getCounter());
-
+           this.author = new Author (names,surnames);
+           this.year = year ;
+           this.nameOfTheBook = nameOfTheBook;
+           counter ++ ;      // увеличение  счетчика создания объектов book
+           this.id = counter;
     }
        /*
         п 4
@@ -65,19 +64,13 @@ public class Book extends Object {
            this.year = year;
        }
 
-       public void setCounter (int counter) { this.counter = counter;}
+       //public void setCounter (int counter) { this.counter = counter;}
 
-       public void setAuthor(Author author) {
-        this.author = author;
-       }
+       //public void setAuthor(Author author) { this.author = author; }
 
-       public void setNameOfTheBook(String nameOfTheBook) {
-        this.nameOfTheBook = nameOfTheBook;
-       }
+       // public void setNameOfTheBook(String nameOfTheBook) { this.nameOfTheBook = nameOfTheBook;}
 
-       public void setId(int id) {
-        this.id = id;
-       }
+       // public void setId(int id) {  this.id = id;
                 /*
          1.10. Методы объектов
          Реализовать методы toString, equals и hashCode в классах Author и Book, которые были созданы на прошлом уроке.
@@ -94,26 +87,6 @@ public class Book extends Object {
     public String toString() {
         return id + ". Имя книги: " + nameOfTheBook + ". год издания книги: " + year ;
     }
-/*
-    @Override
-    public boolean equals(Object other) {
-        if (this.getClass() != other.getClass()) {
-            return false;
-        }
-        Book veribleClass = (Book)other;
-        boolean comparison = nameOfTheBook.equals(veribleClass.nameOfTheBook);
-        if (comparison){
-            System.out.println( " Книги имеют одиаковы названия !");
-        } else {System.out.println(" У этих книг разные названия ! ");}
-       return true;
-    }
-
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(nameOfTheBook);
-    }
-    */
 
     @Override
     public boolean equals(Object o) {

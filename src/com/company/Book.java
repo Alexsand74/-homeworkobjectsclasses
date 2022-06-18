@@ -1,10 +1,11 @@
 package com.company;
 
-import phonebook.Contact;
 
 import java.util.Objects;
 
-public class Book extends Object {
+import phonebook.Contact;
+
+public class Book  {
       /*
       п 1
        Необходимо создать класс Book, который содержит в себе данные об имени, авторе и годе публикации.
@@ -85,7 +86,7 @@ public class Book extends Object {
 
     @Override
     public String toString() {
-        return id + ". Имя книги: " + nameOfTheBook + ". год издания книги: " + year ;
+        return  id + ". Имя книги: " + nameOfTheBook + ". год издания книги: " + year + getAuthor().toString() ;
     }
 
     @Override

@@ -2,8 +2,6 @@ package com.company;
 
 import java.util.Objects;
 
-import static java.util.Objects.*;
-
 public class Author {
     /*
     п 2
@@ -69,6 +67,6 @@ public class Author {
 
     @Override
     public int hashCode() {
-        return hash(name, surname);
+        return Objects.hash(name, surname);
     }
 }

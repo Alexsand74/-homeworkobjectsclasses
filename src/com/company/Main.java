@@ -98,10 +98,10 @@ public class Main {
         System.out.println();
         System.out.println("теперь  применяем переопределенный метод toString как в классе Book так же и в классе Autor");
         System.out.println(" выводим экземпляр класса   book1 - ");
-        System.out.println(book1.toString() + book1.getAuthor().toString());
+        System.out.println(book1.toString());
         System.out.println();
         System.out.println(" выводим экземпляр класса   book4 - ");
-        System.out.println(book4.toString() + book4.getAuthor().toString());
+        System.out.println(book4.toString());
         System.out.println("теперь применяем переопределенный метод equals ( book1.equals(book4);) как в классе Book, сравним книги book1 и book4");
         book1.equals(book4);
         System.out.println ("теперь сравниваем авторов этих же экземпляров класса Book и выводим на консоль true или false ");
